@@ -1,0 +1,38 @@
+[project]
+name = "{{cookiecutter.module_name}}"
+version = "{{cookiecutter.version}}"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pip-tools",
+    "pydata-sphinx-theme",
+    "pytest",
+    "ruff",
+    "sphinx",
+]
+extras = []
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+line-length = 80
+
+[tool.ruff.format]
+quote-style = "single"
+
+[tool.ruff.lint]
+extend-select = ["ANN", "D", "I", "W"]
+ignore = ["E701"]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401", "D104"]
+"test_*.py" = ["ANN201", "D100", "D103"]
+"docs/**/*.py" = ["D100"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"

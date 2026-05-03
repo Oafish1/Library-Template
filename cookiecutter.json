@@ -1,0 +1,22 @@
+{
+    "full_name": "YOUR NAME",
+    "project_name": "PROJECT NAME",
+    "project_title": "{{ cookiecutter.project_name }}",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+    "module_name": "{{ cookiecutter.project_slug.replace('-', '_') }}",
+    "python_version": "3.12",
+    "date": "{% now 'local', '%Y-%m-%d' %}",
+    "main_branch": "main",
+    "github_pages_branch": "docs",
+    "automatic_docs_to_pages": true,
+    "url": "",
+    "version": "0.1.0",
+    "license": [
+        "Apache Software License 2.0",
+        "Custom"
+    ],
+    "_extensions": ["jinja2_time.TimeExtension"],
+    "_copy_without_render": [
+        "docs/source/_templates"
+    ]
+}

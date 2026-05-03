@@ -1,0 +1,33 @@
+name: Build Docs
+
+on:
+  push:
+    branches: [{{ cookiecutter.main_branch }}] # branch to trigger deployment
+
+permissions:
+  contents: write
+
+jobs:
+  pages:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v6
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '{{ cookiecutter.python_version }}'
+    - name: Install dependencies
+      run: |
+        pip install -r requirements-dev.txt
+    - name: Build documentation
+      run: |
+        make build-docs
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      if: ${% raw %}{{ github.event_name == 'push' && github.ref == 'refs/heads/{% endraw %}{{ cookiecutter.main_branch }}{% raw %}' }}{% endraw %}
+      with:
+        publish_branch: {{ cookiecutter.github_pages_branch }}
+        github_token: ${% raw %}{{ secrets.GITHUB_TOKEN }}{% endraw %}
+        publish_dir: ./docs/build/html
+        force_orphan: true
