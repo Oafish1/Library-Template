@@ -7,19 +7,18 @@ This repository contains a template for Python libraries using Sphinx with integ
 - **Makefile installation, testing, exporting, linting, and documentation**
 - **Optional automatic documentation export to GitHub Pages**
 
-## Installation
+## Creation
 
-First, clone the repository and install `cookiecutter`,
+First, install `cookiecutter` and `jinja2-time`,
 
 ```bash
-git clone https://github.com/Oafish1/Library-Template
-pip install cookiecutter
+pip install cookiecutter jinja2-time
 ```
 
-Use the template to create a new project folder using the following command, filling out the template naming and optional information as desired,
+Then, use the template to create a new project folder using the following command, filling out the template naming and optional information as desired,
 
 ```bash
-cookiecutter ./Library-Template
+cookiecutter gh:oafish1/library-templatecookiecutter
 ```
 
 Your project is now created! Feel free to begin development.
