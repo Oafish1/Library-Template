@@ -35,7 +35,7 @@ test:
 .PHONY: pre-commit
 pre-commit:
 	$(MAKE) build build-docs lint test
-	echo "Don't forget to update the version in `pyproject.toml` and `CITATION.cff`."
+	echo "Don't forget to update the version in \`pyproject.toml\` and \`CITATION.cff\`."
 
 # Help command
 .DEFAULT_GOAL := help
