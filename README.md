@@ -18,7 +18,7 @@ pip install cookiecutter jinja2-time
 Then, use the template to create a new project folder using the following command, filling out the template naming and optional information as desired,
 
 ```bash
-cookiecutter gh:oafish1/library-templatecookiecutter
+cookiecutter gh:oafish1/library-template
 ```
 
 Your project is now created! Feel free to begin development.

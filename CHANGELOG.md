@@ -1,3 +1,6 @@
+# 0.4.0
+- Correct `README` command error
+
 # 0.3.0
 - Remove cloning step from `README` for ease of use
 
