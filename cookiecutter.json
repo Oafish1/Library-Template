@@ -6,6 +6,7 @@
     "module_name": "{{ cookiecutter.project_slug.replace('-', '_') }}",
     "python_version": "3.12",
     "date": "{% now 'local', '%Y-%m-%d' %}",
+    "year": "{% now 'local', '%Y' %}",
     "main_branch": "main",
     "github_pages_branch": "docs",
     "automatic_docs_to_pages": true,

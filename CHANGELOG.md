@@ -1,3 +1,6 @@
+# 0.5.0
+- Add year and name to `LICENSE`
+
 # 0.4.0
 - Correct `README` command error
 
